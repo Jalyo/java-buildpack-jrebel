@@ -73,8 +73,3 @@ if [ "true" == $KEEP_M2_CACHE ]; then
     cp -r $CACHE_DIR/$DIR $DIR
   done
 fi
-
-#save maven
-for DIR in ".m2" ".maven" ; do
-  cp -r $CACHE_DIR/$DIR $BUILD_DIR/$DIR
-done
