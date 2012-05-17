@@ -78,3 +78,6 @@ fi
 for DIR in ".m2" ".maven" ; do
   cp -r $CACHE_DIR/$DIR $BUILD_DIR/$DIR
 done
+
+#set env var
+export MAVEN_OPTS="-javaagent:$STACKATO_APP_ROOT/src/main/resources/lib/jrebel.jar $MAVEN_OPTS"
