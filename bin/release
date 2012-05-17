@@ -8,7 +8,7 @@ cat <<EOF
 config_vars:
   PATH: /usr/local/bin:/usr/bin:/bin
   JAVA_OPTS: -Xmx384m -Xss512k -XX:+UseCompressedOops
-  MAVEN_OPTS: -Xmx384m -Xss512k -XX:+UseCompressedOops -javaagent:BUILD_DIR/src/main/resources/lib/jrebel.jar
+  MAVEN_OPTS: -Xmx384m -Xss512k -XX:+UseCompressedOops -javaagent:$STACKATO_APP_ROOT/src/main/resources/lib/jrebel.jar
 addons:
   shared-database:5mb
 
