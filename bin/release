@@ -7,8 +7,9 @@ cat <<EOF
 ---
 config_vars:
   PATH: /usr/local/bin:/usr/bin:/bin
-  JAVA_OPTS: -Xmx384m -Xss512k -XX:+UseCompressedOops -javaagent:/app/app/rebel/jrebel.jar
+  JAVA_OPTS: -Xmx384m -Xss512k -XX:+UseCompressedOops -javaagent:/app/app/rebel/jrebel.jar -Xms256m -Xmx512m -XX:MaxPermSize=256m
   MAVEN_OPTS: -Xmx384m -Xss512k -XX:+UseCompressedOops -javaagent:/app/app/rebel/jrebel.jar
+  JAVA_OPTIONS: -javaagent:/app/app/rebel/jrebel.jar -Xms256m -Xmx512m -XX:MaxPermSize=256m
 addons:
   shared-database:5mb
 
